@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <dj.example.main.customviews.CircularImageView
+        android:id="@+id/userImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding_default_4x"
+        app:border="true"
+        app:border_color="@color/colorWhite"
+        app:border_width="1dp"
+        app:shadow="false" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        tools:text="User Name" />
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvGoldCoins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="9999"
+            android:textColor="@color/White"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/ivGold"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/vector_icon_gallery" />
+
+        <TextView
+            android:id="@+id/tvDiamondCoins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:padding="12dp"
+            android:text="30"
+            android:textColor="@color/White"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/ivDiamond"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/vector_icon_camera" />
+
+    </LinearLayout>-->
+
+    <!--<Button
+        android:id="@+id/editProfile"
+        android:text="Edit Profile"
+        style="@style/linkWhiteButton"
+        android:textSize="11sp"
+        android:visibility="invisible"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />-->
+
+</RelativeLayout>

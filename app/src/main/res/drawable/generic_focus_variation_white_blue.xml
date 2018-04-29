@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:drawable="@drawable/bg_1dp_white_stroke_darkblue_filling"
+        android:state_enabled="true"
+        android:state_selected="true"
+        android:state_focused="true" />-->
+    <item android:color="@color/colorWhite"
+        android:state_enabled="true" android:state_focused="true" />
+    <!--<item android:drawable="@color/colorMainMenuBgSelected"
+        android:state_enabled="true"
+        android:state_selected="true" />-->
+    <item android:color="@color/blue"
+        android:state_enabled="true" />
+</selector>

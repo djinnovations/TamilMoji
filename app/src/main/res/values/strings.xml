@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="fb_app_id">408794016111214</string>
+    <string name="gl_server_api_key">AIzaSyBS7zC9tJFmYzF8HmK-aQNMgV06mO09kLI</string>
+
+    <string name="fb_login_txt">Sign in with Facebook</string>
+    <string name="username">Username</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">Sign in</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="acct_txt">Or sign in with Company\'s account</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+</resources>

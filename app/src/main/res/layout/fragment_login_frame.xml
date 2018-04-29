@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/login_frame_height"
+    android:background="@color/colorAppPrimaryBg"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/login_frame_padding_top">
+
+    <ImageView
+        android:layout_width="@dimen/login_frame_logo_width"
+        android:layout_height="@dimen/login_frame_logo_height"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_logo_temp" />
+
+</LinearLayout>

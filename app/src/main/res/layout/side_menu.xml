@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/nav_header_height"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:paddingTop="4dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/darkblue" />
+
+        <TextView
+            android:id="@+id/nav_menu_home"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/link_button_bg"
+            android:gravity="start|center_vertical"
+            android:paddingStart="10dp"
+            android:paddingTop="6dp"
+            android:text="Continue Watching"
+            android:textColor="@color/colorMaterialBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nav_menu_fav"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/link_button_bg"
+            android:gravity="start|center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingStart="10dp"
+            android:text="My Favourites"
+            android:textColor="@color/colorMaterialBlack"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/darkblue" />
+
+
+        <TextView
+            android:id="@+id/nav_menu_profile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/link_button_bg"
+            android:gravity="start|center_vertical"
+            android:paddingStart="10dp"
+            android:text="Profile"
+            android:textColor="@color/colorMaterialBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nav_menu_settings"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/link_button_bg"
+            android:gravity="start|center_vertical"
+            android:paddingStart="10dp"
+            android:text="Settings"
+            android:textColor="@color/colorMaterialBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nav_menu_about"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/link_button_bg"
+            android:gravity="start|center_vertical"
+            android:paddingStart="10dp"
+            android:text="About Us"
+            android:textColor="@color/colorMaterialBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nav_menu_logout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/link_button_bg"
+            android:gravity="start|center_vertical"
+            android:paddingStart="10dp"
+            android:text="Logout"
+            android:textColor="@color/colorMaterialBlack"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_normal">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:theme="@style/TextInputLayoutStyleLogin"
+        app:errorEnabled="true">
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@drawable/generic_focus_variation_blackmat_grey"
+            android:textSize="14sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16dp"
+        android:theme="@style/TextInputLayoutStyleLogin"
+        app:errorEnabled="true">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="@drawable/generic_focus_variation_blackmat_grey"
+            android:textSize="14sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_emailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16dp"
+        android:visibility="gone"
+        android:theme="@style/TextInputLayoutStyleLogin"
+        app:errorEnabled="true">
+
+        <EditText
+            android:id="@+id/etEmailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@drawable/generic_focus_variation_blackmat_grey"
+            android:textSize="14sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/">-->
+
+    <Button
+        android:id="@+id/btnLoginAcct"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/login_btns_height"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/login"
+        android:background="@drawable/bg_2dp_curve_blue_filling"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAlternateWhite"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/forgotPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:padding="6dp"
+        android:text="@string/forgot"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+</LinearLayout>

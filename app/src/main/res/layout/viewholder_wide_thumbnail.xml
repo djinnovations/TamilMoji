@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:layout_marginEnd="2dp"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="0dp"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="@dimen/wide_thumbnail_width"
+        android:layout_height="@dimen/wide_thumbnail_height"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:paddingBottom="2dp"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:paddingTop="2dp">
+
+
+        <ImageView
+            android:id="@+id/ivThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="0dp"
+            android:paddingEnd="0dp"
+            android:paddingStart="0dp"
+            android:paddingTop="0dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/ivThumbnail"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/ivThumbnail"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="0dp"
+            android:paddingBottom="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingStart="2dp"
+            android:text="jkkj"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
