@@ -113,7 +113,7 @@ public class MainFragment extends SingleMenuFragment {
             HeaderThumbnailData.ThumbnailData data = (HeaderThumbnailData.ThumbnailData) event;
             //((BaseActivity) getActivity()).setInfoMsg(data.getTitle());
             if (getActivity() instanceof HomeActivity){
-                //((HomeActivity) getActivity()).launchDetailsActivity(data);
+                ((HomeActivity) getActivity()).launchSharing(data.getThumbnailUrl());
             }
         }
     }

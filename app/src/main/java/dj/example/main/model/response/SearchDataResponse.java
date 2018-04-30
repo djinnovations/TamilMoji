@@ -1,5 +1,7 @@
 package dj.example.main.model.response;
 
+import java.util.List;
+
 /**
  * Created by CSC on 4/29/2018.
  */
@@ -7,6 +9,12 @@ package dj.example.main.model.response;
 public class SearchDataResponse {
 
     public static class SearchResponse{
+
+        private List<SearchData> data;
+
+        public List<SearchData> getData() {
+            return data;
+        }
 
         public static class SearchData{
             public String _id;

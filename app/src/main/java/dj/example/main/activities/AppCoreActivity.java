@@ -179,14 +179,14 @@ public abstract class AppCoreActivity extends AppCompatActivity {
     }
 
     protected void promptBeforeExit(){
-        final Snackbar snackbar = Snackbar.make(getViewForLayoutAccess(), "Sure you want to exit?", Snackbar.LENGTH_SHORT);
+        final Snackbar snackbar = Snackbar.make(getViewForLayoutAccess(), "Sure you want to exit?", Snackbar.LENGTH_LONG);
         snackbar.setAction("Yes", new View.OnClickListener() {
             public void onClick(View v) {
                 snackbar.dismiss();
                 onExitYesClick();
             }
         });
-        ColoredSnackbar.alert(snackbar).show();
+        ColoredSnackbar.info(snackbar).show();
     }
 
     protected void onExitYesClick(){
@@ -195,7 +195,7 @@ public abstract class AppCoreActivity extends AppCompatActivity {
             public void run() {
                 finish();
             }
-        }, 1000);
+        }, 500);
     }
 
     protected abstract void onGarbageCollection();

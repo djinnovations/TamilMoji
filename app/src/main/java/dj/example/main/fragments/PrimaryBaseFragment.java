@@ -43,14 +43,14 @@ public abstract class PrimaryBaseFragment extends Fragment {
     protected abstract String getFragmentTitle();
 
     @Override
-    public void onStart() {
-        super.onStart();
+    public void onResume() {
+        super.onResume();
         EventBus.getDefault().register(this);
     }
 
     @Override
-    public void onStop() {
-        super.onStop();
+    public void onPause() {
+        super.onPause();
         EventBus.getDefault().unregister(this);
     }
 

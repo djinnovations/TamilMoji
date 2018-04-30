@@ -103,7 +103,7 @@ public class PermissionsHelper {
             friendlyPermissionsMeaning = permissions;
         }
 
-        if(permissions != null && permissions.length != 0) {
+        /*if(permissions != null && permissions.length != 0) {
             this.permission = new TedPermission(this.context);
             this.permission.setPermissionListener(this.permissionlistener);
             this.permission.setPermissions(permissions);
@@ -173,7 +173,7 @@ public class PermissionsHelper {
             }
 
             this.permission.check();
-        }
+        }*/
 
     }
 

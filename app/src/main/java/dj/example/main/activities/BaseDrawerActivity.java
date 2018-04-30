@@ -54,8 +54,8 @@ public abstract class BaseDrawerActivity extends BaseActivity implements Navigat
     }
 
     @OnClick({R.id.nav_menu_home,
-            R.id.nav_menu_fav, R.id.nav_menu_profile,
-            R.id.nav_menu_settings, R.id.nav_menu_about, R.id.nav_menu_logout})
+            R.id.nav_menu_explore, R.id.nav_menu_profile,
+            R.id.nav_menu_settings, R.id.nav_menu_about, R.id.nav_menu_logout, R.id.nav_menu_contact_us})
     public void menuButtonClick(View view) {
         int id = view.getId();
         menuAction(id);
@@ -64,7 +64,7 @@ public abstract class BaseDrawerActivity extends BaseActivity implements Navigat
     public void menuAction(int id) {
 
         if (drawerLayout.isDrawerOpen(GravityCompat.START))
-            drawerLayout.closeDrawer(GravityCompat.START);
+            drawerLayout.closeDrawer(GravityCompat.START, false);
 
         NavigationDataObject navigationDataObject = MyApplication.getInstance().getNavigationObj(id);
         if (navigationDataObject != null) {
@@ -200,7 +200,7 @@ public abstract class BaseDrawerActivity extends BaseActivity implements Navigat
         View headerLayout = vNavigation.getHeaderView(0);
         //// TODO: 09-07-2017  load name and user images here in silder view 
         TextView userName = (TextView) headerLayout.findViewById(R.id.userName);
-        userName.setText("DJphy");
+        userName.setText("Welcome");
         ImageView userImage = (ImageView) headerLayout.findViewById(R.id.userImage);
         Picasso.with(this).load(R.drawable.vector_icon_profile_white_outline).placeholder(R.drawable
                 .vector_icon_profile_white_outline).into(userImage);

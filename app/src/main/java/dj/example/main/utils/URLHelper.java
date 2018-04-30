@@ -26,8 +26,12 @@ public class URLHelper {
         ourInstance = null;
     }
 
-    public String getHomAPI() {
+    public String getHomeAPI() {
         return END_POINT+"home.php";
+    }
+
+    public String getSearchAPI(String txt) {
+        return END_POINT+"explore.php?query="+txt;
     }
 
 }

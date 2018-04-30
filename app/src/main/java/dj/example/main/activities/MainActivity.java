@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -12,7 +13,7 @@ import dj.example.main.R;
 import dj.example.main.fragments.MainFragment;
 import dj.example.main.utils.MyPrefManager;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseDrawerActivity {
 
     /*@Override
     public ArrayList<Pair<Class, String>> getTabFragmentsList() {
@@ -24,7 +25,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public ProgressBar getProgressBar() {
-        return new ProgressBar(this);
+        return progressBar;
     }
 
     @Override
@@ -34,11 +35,15 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public View getViewForLayoutAccess() {
-        return null;
+        return flHolder;
     }
 
     @BindView(R.id.activity_main)
-    FrameLayout activity_main;
+    RelativeLayout activity_main;
+    @BindView(R.id.flHolder)
+    FrameLayout flHolder;
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +51,12 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        MyPrefManager.getInstance().updateSessionCounts();
-        getSupportFragmentManager().beginTransaction().replace(activity_main.getId(), new MainFragment()).commit();
+        onCreateDelegate();
+        //MyPrefManager.getInstance().updateSessionCounts();
+    }
+
+    protected void onCreateDelegate(){
+        getSupportFragmentManager().beginTransaction().replace(flHolder.getId(), new MainFragment()).commit();
     }
 
     @Override

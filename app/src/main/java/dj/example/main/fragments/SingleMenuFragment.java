@@ -42,13 +42,13 @@ public abstract class SingleMenuFragment extends PrimaryBaseFragment {
 
     public abstract boolean isAddSnapper();
 
+    public
     @BindView(R.id.llBody)
     LinearLayout llBody;
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
-        setBodySettings(llBody);
         setUpRecycleView();
     }
 
@@ -61,7 +61,7 @@ public abstract class SingleMenuFragment extends PrimaryBaseFragment {
         rvMenu.setLayoutManager(mLayoutManager);
         rvMenu.setItemAnimator(new DefaultItemAnimator());
         if (isAddSnapper())
-            UiRandomUtils.getInstance().addSnapper(rvMenu, Gravity.START);
+            UiRandomUtils.getInstance().addSnapper(rvMenu, getSnapperGravity());
         //mTitlesAdapter = new TitlesAdapter(mainMenuSelectionListener);
         RecyclerView.Adapter adapter = getAdapter();
         if (adapter == null)
@@ -69,8 +69,8 @@ public abstract class SingleMenuFragment extends PrimaryBaseFragment {
         rvMenu.setAdapter(adapter);
     }
 
-    protected void setBodySettings(LinearLayout bodyLayout){
-
+    protected int getSnapperGravity(){
+        return Gravity.START;
     }
 
     public abstract RecyclerView.LayoutManager getLayoutManager();

@@ -3,9 +3,12 @@ package dj.example.main.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.util.DisplayMetrics;
 
+import dj.example.main.MyApplication;
 import dj.example.main.activities.MainActivity;
 
 /**
@@ -30,6 +33,12 @@ public class RandomUtils {
 
     public static void clearInstance(){
         ourInstance = null;
+    }
+
+    public static int convertDpToPixel(float dp){
+        Resources resources = MyApplication.getInstance().getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        return (int) (dp * ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT));
     }
 
     public boolean isConnected(Context c) {

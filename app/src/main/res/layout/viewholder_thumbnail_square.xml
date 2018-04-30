@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rlMain"
-    android:layout_width="@dimen/wide_thumbnail_width"
-    android:layout_height="@dimen/wide_thumbnail_height"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="2dp"
     android:layout_marginEnd="2dp"
     android:layout_marginStart="2dp"
@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/ivThumbnail"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:paddingBottom="0dp"
         android:paddingEnd="0dp"
@@ -30,6 +30,25 @@
         android:background="@android:color/transparent"
         android:ellipsize="end"
         android:maxLines="2"
+        android:paddingBottom="4dp"
+        android:paddingStart="2dp"
+        android:text="jkkj"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivThumbnail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:ellipsize="end"
+        android:maxLength="10"
+        android:maxLines="1"
         android:paddingBottom="4dp"
         android:paddingStart="2dp"
         android:text="jkkj"

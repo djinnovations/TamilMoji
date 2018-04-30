@@ -2,6 +2,7 @@ package dj.example.main.activities;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -110,11 +111,26 @@ public abstract class BaseActivity extends AppCoreActivity {
     public void queryForHomeMojis(){
         AjaxCallback ajaxCallback = getAjaxCallback(HOME_API_CALL);
         ajaxCallback.method(AQuery.METHOD_GET);
-        String url = URLHelper.getInstance().getHomAPI();
+        String url = URLHelper.getInstance().getHomeAPI();
         Log.d(TAG, "GET url- queryForHomeMojis()" + TAG + ": " + url);
         getAQuery().ajax(url, String.class, ajaxCallback);
     }
 
+    protected final int SEARCH_API_CALL = IDUtils.generateViewId();
+
+    public void queryForSearch(String txt){
+        AjaxCallback ajaxCallback = getAjaxCallback(SEARCH_API_CALL);
+        ajaxCallback.method(AQuery.METHOD_GET);
+        String url = URLHelper.getInstance().getSearchAPI(txt);
+        Log.d(TAG, "GET url- queryForSearch()" + TAG + ": " + url);
+        getAQuery().ajax(url, String.class, ajaxCallback);
+    }
+
+    public void launchSharing(String imageUrl) {
+        Intent intent = new Intent(this, SharingActivity.class);
+        intent.setData(Uri.parse(imageUrl));
+        startActivity(intent);
+    }
 
     public final int SOCIAL_LOGIN_CALL = IDUtils.generateViewId();
     public void queryForSocialLogin(JSONObject inputParams){
@@ -160,6 +176,16 @@ public abstract class BaseActivity extends AppCoreActivity {
         Log.d(TAG, "actionType: "+actionType);
         Intent intent;
         if (actionType == NavigationDataObject.ACTIVITY){
+            if (! (getSelf() instanceof HomeActivity)) {
+                if (navigationDataObject.getViewId() == R.id.nav_menu_home) {
+                    onBackPressed();
+                    return true;
+                }
+            } else if (getSelf() instanceof HomeActivity){
+                if (navigationDataObject.getViewId() == R.id.nav_menu_home) {
+                    return true;
+                }
+            }
             Class target = navigationDataObject.getTargetClass();
             if (target != null) {
                 intent = new Intent(this, target);
@@ -171,6 +197,8 @@ public abstract class BaseActivity extends AppCoreActivity {
 
         }else if (actionType == NavigationDataObject.LOGOUT){
             //// TODO: 08-07-2017  perform logout
+            if (true)
+                return true;
             Class target = navigationDataObject.getTargetClass();
             if (target != null) {
                 intent = new Intent(this, target);

@@ -6,6 +6,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -91,6 +92,17 @@
         </activity>
 
         <activity android:name=".activities.NormalLoginActivity">
+        </activity>
+
+        <activity android:name=".activities.SharingActivity"
+            android:theme="@style/Theme.Transparent"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".activities.ExploreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeActivityTheme">
+
         </activity>
 
     </application>

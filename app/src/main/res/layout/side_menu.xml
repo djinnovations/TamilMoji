@@ -28,19 +28,19 @@
             android:gravity="start|center_vertical"
             android:paddingStart="10dp"
             android:paddingTop="6dp"
-            android:text="Continue Watching"
+            android:text="Home"
             android:textColor="@color/colorMaterialBlack"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/nav_menu_fav"
+            android:id="@+id/nav_menu_explore"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:background="@drawable/link_button_bg"
             android:gravity="start|center_vertical"
             android:paddingBottom="6dp"
             android:paddingStart="10dp"
-            android:text="My Favourites"
+            android:text="Explore"
             android:textColor="@color/colorMaterialBlack"
             android:textSize="16sp" />
 
@@ -59,6 +59,7 @@
             android:gravity="start|center_vertical"
             android:paddingStart="10dp"
             android:text="Profile"
+            android:visibility="gone"
             android:textColor="@color/colorMaterialBlack"
             android:textSize="16sp" />
 
@@ -69,7 +70,7 @@
             android:background="@drawable/link_button_bg"
             android:gravity="start|center_vertical"
             android:paddingStart="10dp"
-            android:text="Settings"
+            android:text="Recently Used"
             android:textColor="@color/colorMaterialBlack"
             android:textSize="16sp" />
 
@@ -85,6 +86,17 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/nav_menu_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/link_button_bg"
+            android:gravity="start|center_vertical"
+            android:paddingStart="10dp"
+            android:text="Contact Us"
+            android:textColor="@color/colorMaterialBlack"
+            android:textSize="16sp" />
+
+        <TextView
             android:id="@+id/nav_menu_logout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -92,6 +104,7 @@
             android:gravity="start|center_vertical"
             android:paddingStart="10dp"
             android:text="Logout"
+            android:visibility="gone"
             android:textColor="@color/colorMaterialBlack"
             android:textSize="16sp" />
 

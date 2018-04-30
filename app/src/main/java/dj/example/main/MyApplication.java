@@ -10,6 +10,8 @@ import android.util.Log;
 import java.util.HashMap;
 import java.util.Map;
 
+import dj.example.main.activities.ExploreActivity;
+import dj.example.main.activities.HomeActivity;
 import dj.example.main.activities.LoginActivity;
 import dj.example.main.activities.MainActivity;
 import dj.example.main.activities.WebActivity;
@@ -126,13 +128,14 @@ public class MyApplication extends Application {
     }
     private void setMenuItems(){
         menuItems.clear();
-        menuItems.put(R.id.nav_menu_home, new NavigationDataObject(R.id.nav_menu_home, HomeTabFragment.class, NavigationDataObject.FRAGMENT_VIEW));
-        menuItems.put(R.id.nav_menu_fav, new NavigationDataObject(R.id.nav_menu_fav, MainActivity.class, NavigationDataObject.ACTIVITY));
+        menuItems.put(R.id.nav_menu_home, new NavigationDataObject(R.id.nav_menu_home, HomeActivity.class, NavigationDataObject.ACTIVITY));
+        menuItems.put(R.id.nav_menu_explore, new NavigationDataObject(R.id.nav_menu_explore, ExploreActivity.class, NavigationDataObject.ACTIVITY));
         menuItems.put(R.id.nav_menu_settings, new NavigationDataObject(R.id.nav_menu_settings, null, NavigationDataObject.ACTIVITY));
+        menuItems.put(R.id.nav_menu_contact_us, new NavigationDataObject(R.id.nav_menu_contact_us, null, NavigationDataObject.ACTIVITY));
         menuItems.put(R.id.nav_menu_profile, new NavigationDataObject(R.id.nav_menu_profile,
                 null, NavigationDataObject.ACTIVITY));
-        menuItems.put(R.id.nav_menu_about, new NavigationDataObject(R.id.nav_menu_about, WebActivity.class, "About Us",
-                NavigationDataObject.WEB_ACTIVITY, "urlhere"));
+        menuItems.put(R.id.nav_menu_about, new NavigationDataObject(R.id.nav_menu_about, null, "About Us",
+                NavigationDataObject./*WEB_ACTIVITY*/ACTIVITY, "urlhere"));
         menuItems.put(R.id.nav_menu_logout, new NavigationDataObject(R.id.nav_menu_logout, LoginActivity.class, NavigationDataObject.LOGOUT));
 
     }
