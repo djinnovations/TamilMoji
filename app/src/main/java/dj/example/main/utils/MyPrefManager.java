@@ -36,12 +36,24 @@ public class MyPrefManager {
     public static final String MODE_NORMAL = "normal";
     public static final String MODE_SOCIAL_GL = "social_gl";
     public static final String MODE_SOCIAL_FB = "social_fb";
+    public static final String KEY_SET_STICKER = "sticker_done";
 
     private MyPrefManager() {
         pref = MyApplication.getInstance().getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();
     }
 
+    public void setIsStickersAdded(boolean stat){
+        editor.putBoolean(KEY_SET_STICKER, stat);
+        editor.commit();
+        Log.d(TAG, "setIsStickersAdded - MyPrefManager: " + stat);
+    }
+
+    public boolean iSStickersAdded(){
+        boolean txt = pref.getBoolean(KEY_SET_STICKER, false);
+        Log.d(TAG, "iSStickersAdded - MyPrefManager: " + txt);
+        return txt;
+    }
 
     public void setIsLoginDone(String signInMode, boolean status){
         editor.putBoolean(KEY_LOGIN_STATUS, status);

@@ -7,7 +7,9 @@ import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import dj.example.main.activities.ExploreActivity;
@@ -18,6 +20,8 @@ import dj.example.main.activities.WebActivity;
 import dj.example.main.fragments.HomeTabFragment;
 import dj.example.main.model.NavigationDataObject;
 import dj.example.main.model.UserInfo;
+import dj.example.main.model.response.HomeDataResponse;
+import dj.example.main.modules.stickers.AppIndexingUpdateService;
 import dj.example.main.uiutils.DisplayProperties;
 import dj.example.main.uiutils.UiRandomUtils;
 import dj.example.main.uiutils.WindowUtils;
@@ -57,6 +61,7 @@ public class MyApplication extends Application {
         ourInstance = this;
         uiHandler = new Handler();
         setMenuItems();
+        AppIndexingUpdateService.enqueueWork(this);
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
             private int num = 0;
             private int num1 = 0;
@@ -140,6 +145,21 @@ public class MyApplication extends Application {
 
     }
 
+
+    private List<HomeDataResponse.HomeResponse.HomeData.Emojis> primaryEmojis = new ArrayList<>();
+
+    public void setPrimaryEmojis(List<HomeDataResponse.HomeResponse.HomeData.Emojis> primaryEmojis) {
+        try {
+            this.primaryEmojis = new ArrayList<>(primaryEmojis);
+        } catch (Exception e) {
+            e.printStackTrace();
+            this.primaryEmojis = new ArrayList<>();
+        }
+    }
+
+    public List<HomeDataResponse.HomeResponse.HomeData.Emojis> getPrimaryEmojis() {
+        return new ArrayList<>(primaryEmojis);
+    }
 
     private String fcmToken;
 

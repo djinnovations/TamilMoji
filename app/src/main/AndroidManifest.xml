@@ -31,6 +31,13 @@
         </service>
 
         <!-- end FCM -->
+        <service android:name=".modules.stickers.AppIndexingUpdateService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.firebase.appindexing.UPDATE_INDEX" />
+            </intent-filter>
+        </service>
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
@@ -88,6 +95,13 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="mystickers"/>
+                <data android:host="sticker"/>
             </intent-filter>
         </activity>
 

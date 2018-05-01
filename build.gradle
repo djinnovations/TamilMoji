@@ -33,5 +33,5 @@ ext {
     minSdkVersion = 17
     targetSdkVersion = 27
     supportLibraryVersion = "27.0.2"
-    playServicesVersion = "11.0.2"
+    playServicesVersion = "15.0.0"
 }
